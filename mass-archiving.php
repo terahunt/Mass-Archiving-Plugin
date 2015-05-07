@@ -130,12 +130,12 @@ if (!class_exists ('Pdf_Link_Widget'))
 			$custom_posts; 
 			if($tag != "")
 			{
-				$args = array('orderby'=> 'title', 'order' => 'ASC', 'tag'=>$tag);		
+				$args = array('orderby'=> 'title', 'order' => 'ASC', 'tag'=>$tag, 'nopaging' => true);		
 				$custom_posts = get_posts($args);
 			}
 			else
 			{
-				$args = array('orderby'=> 'title', 'order' => 'ASC');		
+				$args = array('orderby'=> 'title', 'order' => 'ASC', 'nopaging' => true);		
 				$custom_posts = get_posts($args);
 			}
 			return $custom_posts;  	
